@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33638C46-A26C-4425-B0CD-ACF282224B3E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Posphere.My.MyApplication</StartupObject>
+    <RootNamespace>Posphere</RootNamespace>
+    <AssemblyName>Posphere</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Posphere.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Posphere.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Video">
+      <HintPath>D:\ガンズシステム\ソフト\AForge.NET Framework-2.2.5\Release\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>D:\ガンズシステム\ソフト\AForge.NET Framework-2.2.5\Release\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsDB.vb" />
+    <Compile Include="clsINI.vb" />
+    <Compile Include="frm000販売管理メニュー.Designer.vb">
+      <DependentUpon>frm000販売管理メニュー.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm000販売管理メニュー.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm301バージョン情報.Designer.vb">
+      <DependentUpon>frm301バージョン情報.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm301バージョン情報.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm305EXE設定.Designer.vb">
+      <DependentUpon>frm305EXE設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm305EXE設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm402再レシート.Designer.vb">
+      <DependentUpon>frm402再レシート.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm402再レシート.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm403JAN商品検索.Designer.vb">
+      <DependentUpon>frm403JAN商品検索.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm403JAN商品検索.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm404領収書印刷.Designer.vb">
+      <DependentUpon>frm404領収書印刷.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm404領収書印刷.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm500売上点検.Designer.vb">
+      <DependentUpon>frm500売上点検.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm500売上点検.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm501売上点検_品目別集計.Designer.vb">
+      <DependentUpon>frm501売上点検_品目別集計.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm501売上点検_品目別集計.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm502売上点検_部門別集計.Designer.vb">
+      <DependentUpon>frm502売上点検_部門別集計.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm502売上点検_部門別集計.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm503売上点検_客層別集計.Designer.vb">
+      <DependentUpon>frm503売上点検_客層別集計.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm503売上点検_客層別集計.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm504売上点検_分類別集計.Designer.vb">
+      <DependentUpon>frm504売上点検_分類別集計.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm504売上点検_分類別集計.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm505売上点検_現金外集計.Designer.vb">
+      <DependentUpon>frm505売上点検_現金外集計.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm505売上点検_現金外集計.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm506売上点検_時間帯別集計.Designer.vb">
+      <DependentUpon>frm506売上点検_時間帯別集計.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm506売上点検_時間帯別集計.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm507売上点検_会計集計.Designer.vb">
+      <DependentUpon>frm507売上点検_会計集計.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm507売上点検_会計集計.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm508売上点検_ジャーナル.Designer.vb">
+      <DependentUpon>frm508売上点検_ジャーナル.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm508売上点検_ジャーナル.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm510売上点検_電子ジャーナル.Designer.vb">
+      <DependentUpon>frm510売上点検_電子ジャーナル.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm510売上点検_電子ジャーナル.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm600精算処理 .Designer.vb">
+      <DependentUpon>frm600精算処理 .vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm600精算処理 .vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm700管理画面.Designer.vb">
+      <DependentUpon>frm700管理画面.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm700管理画面.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm801取引集計表.Designer.vb">
+      <DependentUpon>frm801取引集計表.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm801取引集計表.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm802ジャーナル照会.Designer.vb">
+      <DependentUpon>frm802ジャーナル照会.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm802ジャーナル照会.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm803電子ジャーナル照会.Designer.vb">
+      <DependentUpon>frm803電子ジャーナル照会.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm803電子ジャーナル照会.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm804会計集計表.Designer.vb">
+      <DependentUpon>frm804会計集計表.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm804会計集計表.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm804会計集計表_エクスポート.Designer.vb">
+      <DependentUpon>frm804会計集計表_エクスポート.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm804会計集計表_エクスポート.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm805店舗情報登録.Designer.vb">
+      <DependentUpon>frm805店舗情報登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm805店舗情報登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm806端末情報登録.Designer.vb">
+      <DependentUpon>frm806端末情報登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm806端末情報登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm807店舗情報登録店舗メンテ.Designer.vb">
+      <DependentUpon>frm807店舗情報登録店舗メンテ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm807店舗情報登録店舗メンテ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm809データベース参照.Designer.vb">
+      <DependentUpon>frm809データベース参照.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm809データベース参照.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm817マスタ反映.Designer.vb">
+      <DependentUpon>frm817マスタ反映.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm817マスタ反映.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm819日付時刻変更.Designer.vb">
+      <DependentUpon>frm819日付時刻変更.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm819日付時刻変更.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm400POS.Designer.vb">
+      <DependentUpon>frm400POS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm400POS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm201トップ.Designer.vb">
+      <DependentUpon>frm201トップ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm201トップ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm401POS預り.Designer.vb">
+      <DependentUpon>frm401POS預り.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm401POS預り.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdl_Common.vb" />
+    <Compile Include="sfrmPOSメニュー.Designer.vb">
+      <DependentUpon>sfrmPOSメニュー.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sfrmPOSメニュー.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sfrmPOS処理.Designer.vb">
+      <DependentUpon>sfrmPOS処理.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sfrmPOS処理.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sfrmパスワード.Designer.vb">
+      <DependentUpon>sfrmパスワード.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sfrmパスワード.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmベース.Designer.vb">
+      <DependentUpon>frmベース.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmベース.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdl_Sound.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="clsVideo.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frm000販売管理メニュー.resx">
+      <DependentUpon>frm000販売管理メニュー.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm301バージョン情報.resx">
+      <DependentUpon>frm301バージョン情報.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm305EXE設定.resx">
+      <DependentUpon>frm305EXE設定.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm402再レシート.resx">
+      <DependentUpon>frm402再レシート.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm403JAN商品検索.resx">
+      <DependentUpon>frm403JAN商品検索.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm404領収書印刷.resx">
+      <DependentUpon>frm404領収書印刷.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm500売上点検.resx">
+      <DependentUpon>frm500売上点検.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm501売上点検_品目別集計.resx">
+      <DependentUpon>frm501売上点検_品目別集計.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm502売上点検_部門別集計.resx">
+      <DependentUpon>frm502売上点検_部門別集計.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm503売上点検_客層別集計.resx">
+      <DependentUpon>frm503売上点検_客層別集計.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm504売上点検_分類別集計.resx">
+      <DependentUpon>frm504売上点検_分類別集計.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm505売上点検_現金外集計.resx">
+      <DependentUpon>frm505売上点検_現金外集計.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm506売上点検_時間帯別集計.resx">
+      <DependentUpon>frm506売上点検_時間帯別集計.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm507売上点検_会計集計.resx">
+      <DependentUpon>frm507売上点検_会計集計.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm508売上点検_ジャーナル.resx">
+      <DependentUpon>frm508売上点検_ジャーナル.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm510売上点検_電子ジャーナル.resx">
+      <DependentUpon>frm510売上点検_電子ジャーナル.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm600精算処理 .resx">
+      <DependentUpon>frm600精算処理 .vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm700管理画面.resx">
+      <DependentUpon>frm700管理画面.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm801取引集計表.resx">
+      <DependentUpon>frm801取引集計表.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm802ジャーナル照会.resx">
+      <DependentUpon>frm802ジャーナル照会.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm803電子ジャーナル照会.resx">
+      <DependentUpon>frm803電子ジャーナル照会.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm804会計集計表.resx">
+      <DependentUpon>frm804会計集計表.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm804会計集計表_エクスポート.resx">
+      <DependentUpon>frm804会計集計表_エクスポート.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm805店舗情報登録.resx">
+      <DependentUpon>frm805店舗情報登録.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm806端末情報登録.resx">
+      <DependentUpon>frm806端末情報登録.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm807店舗情報登録店舗メンテ.resx">
+      <DependentUpon>frm807店舗情報登録店舗メンテ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm809データベース参照.resx">
+      <DependentUpon>frm809データベース参照.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm817マスタ反映.resx">
+      <DependentUpon>frm817マスタ反映.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm819日付時刻変更.resx">
+      <DependentUpon>frm819日付時刻変更.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm400POS.resx">
+      <DependentUpon>frm400POS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm201トップ.resx">
+      <DependentUpon>frm201トップ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm401POS預り.resx">
+      <DependentUpon>frm401POS預り.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sfrmPOSメニュー.resx">
+      <DependentUpon>sfrmPOSメニュー.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sfrmPOS処理.resx">
+      <DependentUpon>sfrmPOS処理.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sfrmパスワード.resx">
+      <DependentUpon>sfrmパスワード.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmベース.resx">
+      <DependentUpon>frmベース.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
